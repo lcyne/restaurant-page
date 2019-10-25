@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/contact.js":
+/*!************************!*\
+  !*** ./src/contact.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nconst contacts = {\n  address: 'Restaurant address',\n  phone: '+33 1 23 45 67 89',\n  email: 'restaurant@email.address',\n};\n\nconst render = () => {\n  const contactInfo = document.createElement('div');\n  contactInfo.id = 'contact-info';\n\n  const contactInfoList = document.createElement('ul');\n  for (let item in contacts) {\n    contactInfoList.appendChild(_createContact(item));\n  }\n  contactInfo.appendChild(contactInfoList);\n\n  return contactInfo;\n};\n\nconst _createContact = (item) => {\n  const line = document.createElement('li');\n  line.textContent = `${item}: ${contacts[item]}`;\n  return line;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (render);\n\n//# sourceURL=webpack:///./src/contact.js?");
+
+/***/ }),
+
 /***/ "./src/homepage.js":
 /*!*************************!*\
   !*** ./src/homepage.js ***!
@@ -94,7 +106,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return render; });\nconst pathToImage = 'https://images.unsplash.com/photo-1546983620-53cb1c496917?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80';\nconst altText = \"Facade of our restaurant with our outdoor tables\";\nconst imageCreditBadge = '<a style=\"background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px\" href=\"https://unsplash.com/@dnovac?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge\" target=\"_blank\" rel=\"noopener noreferrer\" title=\"Download free do whatever you want high-resolution photos from Dan Novac\"><span style=\"display:inline-block;padding:2px 3px\"><svg xmlns=\"http://www.w3.org/2000/svg\" style=\"height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white\" viewBox=\"0 0 32 32\"><title>unsplash-logo</title><path d=\"M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z\"></path></svg></span><span style=\"display:inline-block;padding:2px 3px\">Dan Novac</span></a>';\n\nconst render = () => {\n  const homepage = document.createElement('div');\n  homepage.id = 'homepage';\n\n  const components = {\n    image: _renderImage(),\n    title: _renderTitle(),\n    paragraph: _renderParagraph(),\n  };\n\n  for (let prop in components) {\n    homepage.appendChild(components[prop]);\n  }\n\n  return homepage;\n};\n\nconst _renderImage = () => {\n  const component = document.createElement('div');\n  component.id = \"homepage-image\";\n\n  const image = document.createElement('img');\n  image.src = pathToImage;\n  image.alt = altText;\n\n  const credit = document.createElement('div');\n  credit.innerHTML = `Photo by ${imageCreditBadge}`;\n\n  component.appendChild(image);\n  component.appendChild(credit);\n\n  return component;\n};\n\nconst _renderTitle = () => {\n  const title = document.createElement('h1');\n  title.textContent = \"Welcome to Paris-Beaubourg\";\n  return title;\n};\n\nconst _renderParagraph = () => {\n  const paragraph = document.createElement('p');\n  paragraph.textContent = 'We offer to serve you with the finest French' +\n  'cuisine in the heart of the capital. Immerse in the Parisian lifestyle ' +\n  'while enjoying our best dishes for an unforgettable experience.';\n  return paragraph;\n};\n\n\n\n//# sourceURL=webpack:///./src/homepage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nconst pathToImage = 'images/homepage/homepage.webp'\nconst altText = \"Facade of our restaurant with our outdoor tables\";\nconst imageCreditBadge = '<a style=\"background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px\" href=\"https://unsplash.com/@dnovac?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge\" target=\"_blank\" rel=\"noopener noreferrer\" title=\"Download free do whatever you want high-resolution photos from Dan Novac\"><span style=\"display:inline-block;padding:2px 3px\"><svg xmlns=\"http://www.w3.org/2000/svg\" style=\"height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white\" viewBox=\"0 0 32 32\"><title>unsplash-logo</title><path d=\"M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z\"></path></svg></span><span style=\"display:inline-block;padding:2px 3px\">Dan Novac</span></a>';\n\nconst render = () => {\n  const homepage = document.createElement('div');\n  homepage.id = 'homepage';\n\n  const components = {\n    image: _renderImage(),\n    title: _renderTitle(),\n    paragraph: _renderParagraph(),\n  };\n\n  for (let prop in components) {\n    homepage.appendChild(components[prop]);\n  }\n\n  return homepage;\n};\n\nconst _renderImage = () => {\n  const component = document.createElement('div');\n  component.id = \"homepage-image\";\n\n  const image = document.createElement('img');\n  image.src = pathToImage;\n  image.alt = altText;\n\n  const credit = document.createElement('div');\n  credit.innerHTML = `Photo by ${imageCreditBadge}`;\n\n  component.appendChild(image);\n  component.appendChild(credit);\n\n  return component;\n};\n\nconst _renderTitle = () => {\n  const title = document.createElement('h1');\n  title.textContent = \"Welcome to Paris-Beaubourg\";\n  return title;\n};\n\nconst _renderParagraph = () => {\n  const paragraph = document.createElement('p');\n  paragraph.textContent = 'We offer to serve you with the finest French' +\n  'cuisine in the heart of the capital. Immerse in the Parisian lifestyle ' +\n  'while enjoying our best dishes for an unforgettable experience.';\n  return paragraph;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (render);\n\n//# sourceURL=webpack:///./src/homepage.js?");
 
 /***/ }),
 
@@ -106,7 +118,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _homepage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homepage */ \"./src/homepage.js\");\n\nconst content = document.querySelector('#content');\ncontent.appendChild(Object(_homepage__WEBPACK_IMPORTED_MODULE_0__[\"default\"])());\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _homepage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homepage */ \"./src/homepage.js\");\n/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./contact */ \"./src/contact.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n\n\n\nconst content = document.querySelector('#content');\ncontent.appendChild(Object(_homepage__WEBPACK_IMPORTED_MODULE_0__[\"default\"])());\ncontent.appendChild(Object(_contact__WEBPACK_IMPORTED_MODULE_1__[\"default\"])());\ncontent.appendChild(Object(_menu__WEBPACK_IMPORTED_MODULE_2__[\"default\"])());\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/menu.js":
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nconst _Dish = (image, name, description, price) => {\n  return {\n    image,\n    name,\n    description,\n    price,\n  };\n};\n\nconst currency = '€';\n\nconst dishes = [\n  _Dish(\n    'images/menu/omelet.webp',\n    'Omelette au fromage',\n    'Delicious omelet with cheese.',\n    5\n  ),\n  _Dish(\n    'images/menu/croissant-choco.webp',\n    'Croissant marbré',\n    'Crispy croissant with chocolate added to the dough.',\n    1\n  ),\n];\n\nconst render = () => {\n  const menu = document.createElement('div');\n  menu.id = 'menu';\n\n  const list = document.createElement('ul');\n  dishes.forEach((dish) => {list.appendChild(_createDish(dish))});\n  menu.appendChild(list);\n\n  return menu;\n};\n\nconst _createDish = (dish) => {\n  const dishItem = document.createElement('li');\n\n  const image = document.createElement('img');\n  image.src = dish.image;\n  image.alt = dish.name;\n  dishItem.appendChild(image);\n\n  const title = document.createElement('h3');\n  title.textContent = `${dish.name} (${dish.price + currency})`;\n  dishItem.appendChild(title);\n  \n  const description = document.createElement('p');\n  description.textContent = dish.description;\n  dishItem.appendChild(description);\n\n  return dishItem;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (render);\n\n//# sourceURL=webpack:///./src/menu.js?");
 
 /***/ })
 
