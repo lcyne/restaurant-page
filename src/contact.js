@@ -4,9 +4,10 @@ const contacts = {
   email: 'restaurant@email.address',
 };
 
-const render = () => {
+const _render = () => {
   const contactInfo = document.createElement('div');
-  contactInfo.id = 'contact-info';
+  contactInfo.id = 'contact';
+  contactInfo.classList.add('invisible', 'hidden');
 
   const contactInfoList = document.createElement('ul');
   for (let item in contacts) {
@@ -23,4 +24,4 @@ const _createContact = (item) => {
   return line;
 };
 
-export default render;
+export default _render();

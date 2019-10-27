@@ -24,9 +24,10 @@ const dishes = [
   ),
 ];
 
-const render = () => {
+const _render = () => {
   const menu = document.createElement('div');
   menu.id = 'menu';
+  menu.classList.add('invisible', 'hidden');
 
   const list = document.createElement('ul');
   dishes.forEach((dish) => {list.appendChild(_createDish(dish))});
@@ -54,4 +55,4 @@ const _createDish = (dish) => {
   return dishItem;
 };
 
-export default render;
+export default _render();
