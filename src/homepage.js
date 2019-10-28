@@ -33,14 +33,16 @@ const _renderImage = () => {
 
 const _renderTitle = () => {
   const title = document.createElement('h1');
-  title.textContent = "Welcome to Paris-Beaubourg";
+  title.textContent = "Bonjour Baguette";
+  title.style.fontSize = '2em';
+  title.style.fontWeight = 'bold';
   return title;
 };
 
 const _renderParagraph = () => {
   const paragraph = document.createElement('p');
   paragraph.textContent = 'We offer to serve you with the finest French ' +
-  'cuisine in the heart of the capital. Immerse in the Parisian lifestyle ' +
+  'cuisine in the heart of the capital. Immerse in the Parisian atmosphere ' +
   'while enjoying our best dishes for an unforgettable experience.';
   return paragraph;
 };

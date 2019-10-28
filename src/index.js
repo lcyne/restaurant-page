@@ -21,8 +21,8 @@ const _Tab = (id, content, text, active) => {
 
 const tabs = {
   homepage: _Tab('homepage-tab', 'homepage', 'Home', true),
-  contact: _Tab('contact-tab', 'contact', 'Contact'),
   menu: _Tab('menu-tab', 'menu', 'Menu'),
+  contact: _Tab('contact-tab', 'contact', 'Contact'),
 };
 
 const _initTabs = () => {

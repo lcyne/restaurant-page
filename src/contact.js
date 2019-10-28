@@ -15,12 +15,15 @@ const _render = () => {
   }
   contactInfo.appendChild(contactInfoList);
 
+  contactInfo.style.textAlign = 'left';
+  
   return contactInfo;
 };
 
 const _createContact = (item) => {
   const line = document.createElement('li');
   line.textContent = `${item}: ${contacts[item]}`;
+  line.style.margin = '1em 0 1em 0';
   return line;
 };
 

@@ -1,0 +1,51 @@
+html
+{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.15em;
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  color: #d3d7cf;
+  margin: auto;
+  text-align: center;
+}
+
+nav {
+  border-bottom: 2px solid;
+  margin-bottom: 1em;
+}
+
+div {
+  padding: 1em;
+  margin: auto;
+}
+
+.tab {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.5em;
+  color: #d3d7cf;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  outline: 1px solid #d3d7cf;
+  transition-property: color background-color;
+  transition-duration: .15s;
+  transition-timing-function: ease;
+}
+
+.tab:hover {
+  background-color: rgba(211, 215, 207, .4);
+}
+
+.active {
+  color: black;
+  background-color: #d3d7cf !important;
+}
+
+.hidden {
+  display: none;
+}
+
+#contact {
+  text-transform: capitalize;
+}

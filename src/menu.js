@@ -38,20 +38,33 @@ const _render = () => {
 
 const _createDish = (dish) => {
   const dishItem = document.createElement('li');
+  const wrapper = document.createElement('div');
 
   const image = document.createElement('img');
   image.src = dish.image;
   image.alt = dish.name;
-  dishItem.appendChild(image);
+  image.style.cssFloat = 'left';
+  image.style.maxHeight = '100%';
+  image.style.maxWidth = '100%';
+  image.style.height = '70px';
+  image.style.width = '160px';
+  image.style.margin = '0 1em';
+  wrapper.appendChild(image);
 
   const title = document.createElement('h3');
   title.textContent = `${dish.name} (${dish.price + currency})`;
-  dishItem.appendChild(title);
+  title.style.fontSize = '1.25em';
+  title.style.fontWeight = 'bold';
+  title.style.textAlign = 'left';
+  wrapper.appendChild(title);
   
   const description = document.createElement('p');
   description.textContent = dish.description;
-  dishItem.appendChild(description);
+  description.style.fontStyle = 'italic';
+  description.style.textAlign = 'left';
+  wrapper.appendChild(description);
 
+  dishItem.appendChild(wrapper);
   return dishItem;
 };
 
